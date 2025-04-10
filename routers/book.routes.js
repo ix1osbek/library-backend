@@ -1,32 +1,32 @@
 const { Router } = require("express")
 const booksRouter = Router()
-const { addBook, getBooks, getOneBook, updateBook, de, deleteBook } = require("../controller/books.controller.js")
+const {addBook , getBooks, getOneBook, updateBook , de, deleteBook} = require("../controller/books.controller.js")
 
 //////// add book
-booksRouter.post("/add_book", addBook)
+ booksRouter.post("/add_book" , addBook)
 
-/////// get books
+ /////// get books
 
-booksRouter.get("/get_books", getBooks)
-
-
-/////// get one book
-
-booksRouter.get("/get_one_book/:id", getOneBook)
+ booksRouter.get("/get_books" , getBooks)
 
 
-//////// update book
-booksRouter.put("/update_book/:id", updateBook)
+ /////// get one book
+
+ booksRouter.get("/get_one_book/:id" , getOneBook)
 
 
-/////// delete book
+ //////// update book
+ booksRouter.put("/update_book/:id" , updateBook)
 
-booksRouter.delete("/delete_book/:id", deleteBook)
 
+ /////// delete book
 
+ booksRouter.delete("/delete_book/:id" ,deleteBook )
 
 
 
 
-module.exports = booksRouter
+
+
+ module.exports = booksRouter
 
