@@ -5,14 +5,14 @@ const booksSchema = new mongoose.Schema({
         type: String,
         required: [true, "kitob nomi berilishi shart"],
         minLength: [2, "kitob varaqlari 2 betdan kam bolmasligi kerak!"],
-        maxLength: [1000, "kitob nomi 1000 ta belgidan kam bolishi shart!"],
+        maxLength: [40, "kitob nomi 40 ta belgidan kam bolishi shart!"],
 
     },
     pages: {
         type: Number,
         required: [true, "kitob varaqlari soni berilishi shart!"],
         minLength: [10, "kitob varaqlari soni 10 betdan kam bo'lmasligi kerak"],
-        maxLength: [10000, "kitob varaqlari soni 10000 dan kam bolishi kerak!"]
+        maxLength: [5000, "kitob varaqlari soni 5000 dan kam bolishi kerak!"]
     },
     year: {
         type: Number,

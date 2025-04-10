@@ -1,9 +1,9 @@
 const { Router } = require("express")
 const booksRouter = Router()
 const {addBook , getBooks, getOneBook, updateBook , de, deleteBook} = require("../controller/books.controller.js")
-
+const bookValidate = require("../Middleware/books.middleware.js")
 //////// add book
- booksRouter.post("/add_book" , addBook)
+ booksRouter.post("/add_book" ,bookValidate, addBook)
 
  /////// get books
 

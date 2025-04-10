@@ -1,7 +1,7 @@
 const { Router } = require("express")
 const authorRouter = Router()
 const { getAuthor, addAuthor, getOneAuthor, updateAuthor, deleteAuthor } = require("../controller/authors.controller.js")
-
+// const bookValidate = require("../Middleware/books.middleware.js")
 
 //////////get author
 authorRouter.get("/get_author", getAuthor)
