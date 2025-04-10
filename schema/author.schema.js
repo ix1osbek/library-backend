@@ -27,7 +27,7 @@ const authotSchema = new mongoose.Schema({
         required: [true, "Muallif tafsifi berilishi shart!"],
         minLength: [1, "Author haqida malumot 1 ta belgidan ko'p bo'lishi shart!"]
     }
-}, { versionKey: false })
+}, { versionKey: false , timestamps: true })
 
 const AuthorModels = mongoose.model("authors", authotSchema)
 

@@ -34,6 +34,6 @@ const booksSchema = new mongoose.Schema({
         type: String,
         required: [true, "Kitob haqida malumot berilishi shart!"]
     }
-}, { versionKey: false })
+}, { versionKey: false, timestamps: true })
 const booksModels = mongoose.model("books", booksSchema)
 module.exports = booksModels
