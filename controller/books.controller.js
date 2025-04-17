@@ -13,7 +13,7 @@ const addBook = async (req, res) => {
 }
 
 const getBooks = async (req, res) => {
-    const foundedBooks = await booksModels.find()
+    const foundedBooks = await booksModels.find().populate("")
     if (foundedBooks.length === 0) {
         return res.status(404).json({
             message: "Kitoblar topilmadi"

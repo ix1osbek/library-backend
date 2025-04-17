@@ -27,8 +27,8 @@ const booksSchema = new mongoose.Schema({
         required: [true, "Davlat berilishi shart!"]
     },
     author: {
-        type: String,
-        required: [true, "Author nomi berilishi shart!"]
+        type: mongoose.Types.ObjectId,
+        required: [true, "Author id berilishi shart!"]
     },
     description: {
         type: String,

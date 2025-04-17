@@ -4,17 +4,31 @@ const mongoose = require("mongoose")
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
-        required: true,
+        required: [true, "Username kiritilishi lozim!"],
         unique: true
+    },
+    email: {
+        type: String,
+        required: [true, "email kiritilishi lozim!"],
     },
     password: {
         type: String,
-        required: true
+        required: [true, "parol kiritilishi lozim!"],
     },
-    role: {
-        type: String,
-        required: true,
-        unim: ["admin", "manager", "user"]
+    otp: {
+        type: Number,
+        required: false,
+        default: 0
+    },
+    isVeriFied: {
+        type: Boolean,
+        required: false,
+        default: false
+    },
+    lastTime: {
+        type: Date,
+        required: false,
+        default: 0
     }
 }, {
     timestamps: true
